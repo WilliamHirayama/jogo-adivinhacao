@@ -1,3 +1,5 @@
+var segredos = [];
+
 //Sorteia um número aleatório de 0 a 10
 function sorteiaNumero () {
   return Math.round(Math.random()*10);
@@ -5,8 +7,7 @@ function sorteiaNumero () {
 
 //Sorteia os segredos com base na quantidade de números desejados
 function sorteiaSegredos (quantidadeNumeros) {
-    		
-  var segredos = [];
+ 		
   var contador = 1;
 
   while (contador <= quantidadeNumeros) { //cria um loop para gerar os números na exata quantidade desejada
@@ -33,7 +34,7 @@ function sorteiaSegredos (quantidadeNumeros) {
   return segredos
 }
 		
-var segredos = sorteiaSegredos(3);
+var segredos = sorteiaSegredos(2);
 
 console.log(segredos);
 
@@ -66,6 +67,20 @@ function verifica() {
 
 }
 
-var button = document.querySelector("button");
+var button = document.querySelector(".compare");
 
 button.onclick = verifica;
+
+function gerarNovoSegredo () {
+  if (segredos.length <= 9) {
+    sorteiaSegredos(2);
+  } else {
+    alert("Parabéns! Você descobriu todos os segredos!")
+    alert("Game Over")
+  }
+  console.log(segredos)
+}
+
+var novoSegredo = document.querySelector(".novo-segredo")
+
+novoSegredo.onclick = gerarNovoSegredo;
