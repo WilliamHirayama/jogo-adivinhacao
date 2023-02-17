@@ -1,4 +1,4 @@
-# jogo-adivinhacao
+# Jogo da Adivinhação
 
 Jogo criado no cruso Javascript e HTML da Alura
 
