@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Adivinhação</title>
+    <title>Jogo da Adivinhação</title>
 </head>
 <body>
 
     <h1>Jogo da Adivinhação</h1>
 
-    <p>A cada rodada, o jogo gera dois números entre 1 a 10 para você tentar acertar. Após descobrir os segredos, você pode gerar novos segredos para uma nova rodada. Lembrando que os segredos não se repetem.</p>
-
+    <p>Primeiro, escolha com qual intervalo de números você quer jogar, que será de 1 ao número escolhido por você (Ex.: 1 a 10, 1 a 15, etc).</p>
+    <p>Depois você deve escolher a quantidade de segredos que quer jogar. Por exemplo, se escolher 3, o jogo sorteará aleatoriamente 3 números para você tentar descobrir.</p>
+    <p>O jogo termina quando você descobrir todos os números do intervalo que selecionou.</p>
+    <p>Lembretes importantes:
+    <li>Os segredos não se repetem entre as rodadas;</li>
+    <li>Após a primeira rodada, caso a quantidade de segredos disponíveis seja menor que a jogada na primeira rodada, serão gerados segredos na quantidade restante. Por exemmplo: jogo com máximo de 5 números, com sorteio de 2 segredos. Na terceira rodada, o jogo gerará apenas 1 segredo.</li>
+    
     <br>
 
     <input/>
+    <button class="iniciar">Começar</button>
+
     <button class="compare">Compare com o meu segredo</button>
 
     <button class="novo-segredo">Gerar novo segredo</button>
+
+    <button class="reiniciar">Começar novo jogo</button>
     
     <script src="jogo.js"></script>
 
